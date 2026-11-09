@@ -15,3 +15,6 @@ Imported from canlicapital commit `583e8ddce24da5cdb1355e90cc41f28056fb88aa` (ta
 
 Files owned by this repository and kept across syncs: `.github/` (CI, CodeQL, OpenSSF Scorecard and Dependabot),
 `.gitignore`, `MIRROR.md`, `glama.json`, and the digest-pinned base image in `Dockerfile`.
+
+On Node 20, CI leaves out `test/privacy.test.mjs`: it starts the server with `--permission`, which Node 20 names
+`--experimental-permission`. It runs on Node 22 and 24.
